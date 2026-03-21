@@ -1,0 +1,74 @@
+{
+  "name": "@louis-innovations/sadad-nextjs",
+  "version": "1.0.0",
+  "description": "Next.js 13+ integration for SADAD Payment Gateway — server actions, client components, and API route handlers",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server/index.js",
+      "types": "./dist/server/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "sadad",
+    "payment",
+    "gateway",
+    "qatar",
+    "nextjs",
+    "next",
+    "react",
+    "server-actions",
+    "typescript"
+  ],
+  "author": "Louis Innovations (www.louis-innovations.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/louis-innovations/sadad-nextjs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louis-innovations/sadad-nextjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louis-innovations/sadad-nextjs/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "next": "^13.0.0 || ^14.0.0 || ^15.0.0",
+    "react": "^18.0.0"
+  },
+  "dependencies": {
+    "@louis-innovations/sadad-js-sdk": "file:../sadad-js-sdk"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.0.0",
+    "next": "^15.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.6.0"
+  }
+}
